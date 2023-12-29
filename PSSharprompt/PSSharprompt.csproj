@@ -5,7 +5,20 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+		<VersionPrefix>1.2.0</VersionPrefix>
+		<Description>A Simple PS Wrapper for Sharprompt.</Description>
+		<PackageProjectUrl>https://github.com/skint007Labs/PSSharprompt</PackageProjectUrl>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<RepositoryUrl>https://github.com/skint007Labs/PSSharprompt</RepositoryUrl>
+		<PackageTags>sharprompt;powershell</PackageTags>
 	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Include="..\README.md">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Sharprompt" Version="2.4.5" />

@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 namespace PSSharprompt;
 
 /// <summary>
-/// Shows the Sharprompt list prompt.
+/// Shows the Sharprompt confirm prompt.
 /// </summary>
-[Cmdlet(VerbsCommon.Show, "PromptList")]
-[OutputType(typeof(string[]))]
-public class ShowPromptList : ValidatorPSCmdlet
+[Cmdlet(VerbsCommon.Show, "PromptConfirm")]
+[OutputType(typeof(bool))]
+public class ShowPromptConfirm : BasePSCmdlet
 {
     /// <summary>
     /// The message to display to the user.
@@ -22,25 +22,15 @@ public class ShowPromptList : ValidatorPSCmdlet
     public required string Message { get; set; }
 
     /// <summary>
-    /// Minimum number of items that must be selected.
+    /// The default value if the user does not enter a value.
     /// </summary>
     [Parameter(Mandatory = false)]
-    public int Minimum { get; set; } = 1;
-
-    /// <summary>
-    /// Maximum number of items that may be selected.
-    /// </summary>
-    [Parameter(Mandatory = false)]
-    public int Maximum { get; set; } = int.MaxValue;
-
+    public bool? Default { get; set; }
 
     protected override void ProcessRecord()
     {
         Console.OutputEncoding = Encoding.UTF8;
-        // Build validators from parameters
-        var validators = BuildValidators();
-
-        var result = Prompt.List<string>(Message, Minimum, Maximum, validators);
+        var result = Prompt.Confirm(Message, Default);
         WriteObject(result);
     }
 }
