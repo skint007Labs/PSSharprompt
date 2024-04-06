@@ -1,9 +1,25 @@
 # PSSharprompt
 
+[![GitHub version](https://badge.fury.io/gh/skint007Labs%2FPSSharprompt.svg)](https://badge.fury.io/gh/skint007Labs%2FPSSharprompt)
+![Static Badge](https://img.shields.io/badge/PS-v1.2.0-blue?style=flat&logo=powershell&logoColor=white&link=https%3A%2F%2Fwww.powershellgallery.com%2Fpackages%2FPSSharprompt)
+
 ## About
 This is a simple wrapper for the great [Sharprompt](https://github.com/shibayan/Sharprompt) library to make it easier to use in PowerShell.
 
-This is still a work in progress and not all features are supported yet. I'm not ready to publish this to the PowerShell Gallery just yet, but you can install it from GitHub for now :).
+This is still a work in progress and not all features are supported yet.
+
+## Installation
+Install the module from the PowerShell Gallery
+```powershell
+Install-Module -Name PSSharprompt
+```
+
+You can also install the module from the GitHub repository by downloading the latest release.
+
+*Note: You will need to include the Sharprompt.dll in the same directory as the module dll.*
+```powershell
+Import-Module .\PSSharprompt.dll
+```
 
 ## Supported Features from Sharprompt
 ### Basic Input
