@@ -6,6 +6,9 @@
 ## About
 This is a simple wrapper for the great [Sharprompt](https://github.com/shibayan/Sharprompt) library to make it easier to use in PowerShell.
 
+> [!NOTE]
+> This module is now compatible with PowerShell 5.1 and above.
+
 This is still a work in progress and not all features are supported yet.
 
 ## Installation
@@ -16,7 +19,9 @@ Install-Module -Name PSSharprompt
 
 You can also install the module from the GitHub repository by downloading the latest release.
 
-*Note: You will need to include the Sharprompt.dll in the same directory as the module dll.*
+> [!NOTE]
+> You will need to include the Sharprompt.dll in the same directory as the module dll.*
+
 ```powershell
 Import-Module .\PSSharprompt.dll
 ```
