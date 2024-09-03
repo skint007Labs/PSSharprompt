@@ -19,7 +19,7 @@ public class ShowPromptList : ValidatorPSCmdlet
     /// The message to display to the user.
     /// </summary>
     [Parameter(Mandatory = true, Position = 0)]
-    public required string Message { get; set; }
+    public string Message { get; set; }
 
     /// <summary>
     /// Minimum number of items that must be selected.

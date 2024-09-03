@@ -19,19 +19,19 @@ public class SetPromptSymbol : PSCmdlet
     /// </summary>
     [Parameter(Mandatory = true, Position = 0)]
     [ValidateSet("Prompt", "Done", "Error", "Selector", "Selected", "NotSelect")]
-    public required string Symbol { get; set; }
+    public string Symbol { get; set; }
 
     /// <summary>
     /// The value to set the symbol to.
     /// </summary>
     [Parameter(Mandatory = true)]
-    public required string Value { get; set; }
+    public string Value { get; set; }
 
     /// <summary>
     /// The fallback value to set the symbol to.
     /// </summary>
     [Parameter(Mandatory = true)]
-    public required string FallBackValue { get; set; }
+    public string FallBackValue { get; set; }
 
     protected override void ProcessRecord()
     {

@@ -1,11 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>net8.0</TargetFramework>
+		<TargetFrameworks>netstandard2.0</TargetFrameworks>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
+		<LangVersion>Latest</LangVersion>
 		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
-		<VersionPrefix>1.2.0</VersionPrefix>
+		<VersionPrefix>1.2.2</VersionPrefix>
 		<Description>A Simple PS Wrapper for Sharprompt.</Description>
 		<PackageProjectUrl>https://github.com/skint007Labs/PSSharprompt</PackageProjectUrl>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
@@ -15,7 +16,7 @@
 
 	<ItemGroup>
 		<PackageReference Include="Sharprompt" Version="2.4.5" />
-		<PackageReference Include="System.Management.Automation" Version="7.4.0" />
+		<PackageReference Include="PowerShellStandard.Library" Version="5.1.1" />
 	</ItemGroup>
 
 </Project>

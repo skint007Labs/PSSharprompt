@@ -17,7 +17,7 @@ public class ShowPromptPassword : ValidatorPSCmdlet
     /// The message to display to the user.
     /// </summary>
     [Parameter(Mandatory = true, Position = 0)]
-    public required string Message { get; set; }
+    public string Message { get; set; }
 
     /// <summary>
     /// The character to display in place of the user's input.
